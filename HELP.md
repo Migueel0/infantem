@@ -2,6 +2,8 @@
 The following was discovered as part of building this project:
 
 * The original package name 'com.isppG8.friendsontour.friends-on-tour' is invalid and this project uses 'com.isppG8.friendsontour.friends_on_tour' instead.
+> This is fixed because we renamed the project to Infantem.
+
 
 # Getting Started
 

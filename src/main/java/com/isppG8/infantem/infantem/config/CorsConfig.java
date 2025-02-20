@@ -1,4 +1,4 @@
-package com.isppG8.friendsontour.friends_on_tour.config;
+package com.isppG8.infantem.infantem.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

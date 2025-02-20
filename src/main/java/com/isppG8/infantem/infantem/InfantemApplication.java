@@ -1,13 +1,13 @@
-package com.isppG8.friendsontour.friends_on_tour;
+package com.isppG8.infantem.infantem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FriendsOnTourApplication {
+public class InfantemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FriendsOnTourApplication.class, args);
+		SpringApplication.run(InfantemApplication.class, args);
 	}
 
 }

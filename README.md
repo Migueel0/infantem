@@ -1,9 +1,9 @@
-# Friends On Tour
+# Infantem 
 
-Welcome to the Friends On Tour project! The documentation for the app will appear here. Thanks for checking it out!
+Welcome to the Infantem project! The documentation for the app will appear here. Thanks for checking it out!
 
 ## Index
-- [Introduction](#friends-on-tour)
+- [Introduction](#infantem)
 - [Setup guide](#setup-guide)
   - [Linux setup](#linux-setup)
   - [Windows setup](#windows-setup)
@@ -19,8 +19,8 @@ Follow these steps to set up the project on a Linux machine:
 
 #### 1. Clone the repository
 ```sh
-git clone https://github.com/your-org/friends-on-tour.git  # With HTTP or SSH 
-cd friends-on-tour
+git clone https://github.com/ISPP-G-8/infantem.git  # With HTTP or SSH 
+cd infantem 
 ```
 
 #### 2. Backend Setup 
@@ -57,9 +57,9 @@ cd friends-on-tour
 - Create the database and user:
   ```sh
   sudo mysql -u root -p
-  CREATE DATABASE friends_on_tour_db;
+  CREATE DATABASE infantem_db;
   CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
-  GRANT ALL PRIVILEGES ON friends_on_tour_db TO 'spring_user'@'localhost';
+  GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
   FLUSH PRIVILEGES;
   EXIT;
 

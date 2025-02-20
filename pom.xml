@@ -8,10 +8,10 @@
 		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.isppG8.friendsontour</groupId>
-	<artifactId>friends-on-tour</artifactId>
+	<groupId>com.isppG8.infantem</groupId>
+	<artifactId>infantem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>friends-on-tour</name>
+	<name>infantem</name>
 	<description>Spring Boot backend for React Native app with MySQL.</description>
 	<url/>
 	<licenses>

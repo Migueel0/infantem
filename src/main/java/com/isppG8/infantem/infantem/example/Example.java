@@ -1,4 +1,4 @@
-package com.isppG8.friendsontour.friends_on_tour.example;
+package com.isppG8.infantem.infantem.example;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,10 +1,10 @@
-package com.isppG8.friendsontour.friends_on_tour;
+package com.isppG8.infantem.infantem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FriendsOnTourApplicationTests {
+class InfantemApplicationTests {
 
 	@Test
 	void contextLoads() {
