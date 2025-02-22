@@ -107,7 +107,99 @@ cd infantem
 
 ### Windows setup
 
-_(This section needs to be completed. Please contribute if you have experience setting up the project on Windows.)_
+To set up the project on a Windows machine, follow these steps:
+
+#### 1. Clone the repository
+Open **PowerShell** (or **Command Prompt**) and run the following commands to clone the repository:
+```sh
+git clone https://github.com/ISPP-G-8/infantem.git  # With HTTP or SSH 
+cd infantem 
+ ```
+
+#### 2. Backend Setup
+
+* **Install Java (Recommended: Java 21):**
+    * Download and install **OpenJDK 21** from the [AdoptOpenJDK website](https://adoptopenjdk.net/).
+    * After installation, verify the installation with:
+        ```powershell
+        java --version
+        ```
+
+* **Install MySQL:**
+    1. Download the **MySQL Installer** from the [official MySQL website](https://dev.mysql.com/downloads/installer/).
+    2. Run the installer and select the **MySQL Server** option.
+    3. Follow the installation wizard to install MySQL. During installation, make sure you set a root password.
+    4. After installation, ensure MySQL is running by checking the **MySQL Workbench** or using:
+        ```powershell
+        mysql -u root -p
+        ```
+        Enter your root password when prompted.
+
+
+* **Create the database and user:**
+    1. Run the following in **PowerShell**:
+        ```powershell
+        mysql -u root -p
+        ```
+    2. Enter the root password and execute the following SQL commands:
+        ```sql
+        CREATE DATABASE infantem_db;
+        CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
+        GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
+        FLUSH PRIVILEGES;
+        EXIT;
+        ```
+
+* **Build and run the backend:**
+    1. Open **PowerShell** in the `infantem` directory (or in VSC).
+    2. Run the following command to build and start the backend:
+        ```powershell
+        .\mvnw spring-boot:run
+        ```
+
+#### 3. Frontend Setup
+
+* **Install Node.js and npm:**
+    1. Download and install **Node.js** from the [official website](https://nodejs.org/).
+    2. Verify the installation by running:
+        ```powershell
+        node -v 
+        ```
+        ```powershell
+        npm -v
+        ```
+
+* **Install dependencies:**
+    1. Change to the **frontend** directory:
+        ```powershell
+        cd frontend
+        ```
+    2. Run the following command to install the required dependencies:
+        ```powershell
+        npm install
+        ```
+
+* **Install Expo CLI:** Install **Expo CLI** globally by running:
+    ```powershell
+    npm install -g expo-cli
+    ```
+
+* **Start the development server:** You can run the app using one of the following commands:
+    * For the web:
+        ```powershell
+        npm expo start --web
+        ```
+    * For iOS (if using a macOS machine with a simulator):
+        ```powershell
+        npm expo start --ios
+        ```
+    * For Android (if you have an emulator set up):
+        ```powershell
+        npm expo start --android
+        ```
+
+Running `npm expo start` without options will show the **Expo Developer Tools**, where you can select the platform manually.
+
 
 ### Mac setup
 
