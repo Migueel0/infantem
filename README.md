@@ -316,8 +316,6 @@ Running `npx expo start` without options will show the Expo developer tools wher
      ```
      Checking backend status...
      ```
-> If any issues arise during the setup, check the backend logs, ensure MySQL is running, confirm the API endpoint is accessible, and verify that the frontend is installed correctly. If you still can't troubleshoot the error, contact me, and let's try to fix it together.
-> — Javier Santos
 
 ## Contributing
 If you have experience setting up the project on Windows or macOS, please help complete those sections! Feel free to update the README. 
