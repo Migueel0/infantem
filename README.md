@@ -62,6 +62,7 @@ cd infantem
   GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
   FLUSH PRIVILEGES;
   EXIT;
+  ```
 
 - Build and run the backend:
   ```sh
@@ -97,7 +98,6 @@ cd infantem
   npm install -g expo-cli
   ```
 - Start the development server:
-    You can run the app using:
   ```sh
   npm expo start --web   
   npm expo start --ios  
@@ -118,95 +118,186 @@ cd infantem
 
 #### 2. Backend Setup
 
-* **Install Java (Recommended: Java 21):**
-    * Download and install **OpenJDK 21** from the [AdoptOpenJDK website](https://adoptopenjdk.net/).
-    * After installation, verify the installation with:
-        ```powershell
-        java --version
-        ```
+- Install Java (Recommended: Java 21):
+  - Download and install **OpenJDK 21** from the [AdoptOpenJDK website](https://adoptopenjdk.net/).
+  - After installation, verify the installation with:
+    ```powershell
+    java --version
+    ```
 
-* **Install MySQL:**
-    1. Download the **MySQL Installer** from the [official MySQL website](https://dev.mysql.com/downloads/installer/).
-    2. Run the installer and select the **MySQL Server** option.
-    3. Follow the installation wizard to install MySQL. During installation, make sure you set a root password.
-    4. After installation, ensure MySQL is running by checking the **MySQL Workbench** or using:
-        ```powershell
-        mysql -u root -p
-        ```
-        Enter your root password when prompted.
+- Install MySQL:
+  - Download the **MySQL Installer** from the [official MySQL website](https://dev.mysql.com/downloads/installer/).
+  - Run the installer and select the **MySQL Server** option.
+  - Follow the installation wizard to install MySQL. During installation, make sure you set a root password.
+  - After installation, ensure MySQL is running by checking the **MySQL Workbench** or using:
+    ```powershell
+    mysql -u root -p
+    ```
+    Enter your root password when prompted.
 
+- Create the database and user:
+  - Run the following in **PowerShell**:
+    ```powershell
+    mysql -u root -p
+    ```
+  - Enter the root password and execute the following SQL commands:
+    ```sql
+    CREATE DATABASE infantem_db;
+    CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
+    GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
+    FLUSH PRIVILEGES;
+    EXIT;
+    ```
 
-* **Create the database and user:**
-    1. Run the following in **PowerShell**:
-        ```powershell
-        mysql -u root -p
-        ```
-    2. Enter the root password and execute the following SQL commands:
-        ```sql
-        CREATE DATABASE infantem_db;
-        CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
-        GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
-        FLUSH PRIVILEGES;
-        EXIT;
-        ```
-
-* **Build and run the backend:**
-    1. Open **PowerShell** in the `infantem` directory (or in VSC).
-    2. Run the following command to build and start the backend:
-        ```powershell
-        .\mvnw spring-boot:run
-        ```
+- Build and run the backend:
+  - Open **PowerShell** in the `infantem` directory (or in VSC).
+  - Run the following command to build and start the backend:
+    ```powershell
+    .\mvnw spring-boot:run
+    ```
 
 #### 3. Frontend Setup
 
-* **Install Node.js and npm:**
-    1. Download and install **Node.js** from the [official website](https://nodejs.org/).
-    2. Verify the installation by running:
-        ```powershell
-        node -v 
-        ```
-        ```powershell
-        npm -v
-        ```
-
-* **Install dependencies:**
-    1. Change to the **frontend** directory:
-        ```powershell
-        cd frontend
-        ```
-    2. Run the following command to install the required dependencies:
-        ```powershell
-        npm install
-        ```
-
-* **Install Expo CLI:** Install **Expo CLI** globally by running:
+- Install Node.js and npm:
+  - Download and install **Node.js** from the [official website](https://nodejs.org/).
+  - Verify the installation by running:
     ```powershell
-    npm install -g expo-cli
+    node -v 
+    npm -v
     ```
 
-* **Start the development server:** You can run the app using one of the following commands:
-    * For the web:
-        ```powershell
-        npm expo start --web
-        ```
-    * For iOS (if using a macOS machine with a simulator):
-        ```powershell
-        npm expo start --ios
-        ```
-    * For Android (if you have an emulator set up):
-        ```powershell
-        npm expo start --android
-        ```
+- Install dependencies:
+  - Change to the **frontend** directory:
+    ```powershell
+    cd frontend
+    ```
+  - Run the following command to install the required dependencies:
+    ```powershell
+    npm install
+    ```
+
+- Install Expo CLI:
+  ```powershell
+  npm install -g expo-cli
+  ```
+
+- Start the development server:
+  - For the web:
+    ```powershell
+    npm expo start --web
+    ```
+  - For iOS (if using a macOS machine with a simulator):
+    ```powershell
+    npm expo start --ios
+    ```
+  - For Android (if you have an emulator set up):
+    ```powershell
+    npm expo start --android
+    ```
 
 Running `npm expo start` without options will show the **Expo Developer Tools**, where you can select the platform manually.
 
-
 ### Mac setup
 
-_(This section needs to be completed. Please contribute if you have experience setting up the project on macOS.)_
+Follow these steps to set up the project on a macOS machine:
 
+#### 1. Clone the repository
+```sh
+git clone https://github.com/ISPP-G-8/infantem.git  # With HTTP or SSH
+cd infantem
+```
 
-## Checking everything works
+#### 2. Backend Setup
+
+- Install Java (Recommended: Java 21):
+  ```sh
+  brew install openjdk@21
+  ```
+  Configure `JAVA_HOME`:
+  ```sh
+  echo 'export JAVA_HOME="/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"' >> ~/.zshrc
+  echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.zshrc
+  source ~/.zshrc
+  ```
+  Verify installation:
+  ```sh
+  java -version
+  ```
+
+- Install MySQL:
+  ```sh
+  brew install mysql
+  ```
+  Start MySQL service:
+  ```sh
+  brew services start mysql
+  ```
+  Verify MySQL installation:
+  ```sh
+  mysql -u root -p
+  ```
+  Secure MySQL installation:
+  ```sh
+  mysql_secure_installation
+  ```
+
+- Create the database and user:
+  ```sh
+  mysql -u root -p
+  ```
+  Enter the root password and execute:
+  ```sql
+  CREATE DATABASE infantem_db;
+  CREATE USER 'spring_user'@'localhost' IDENTIFIED BY 'StrongPassword123!';
+  GRANT ALL PRIVILEGES ON infantem_db.* TO 'spring_user'@'localhost';
+  FLUSH PRIVILEGES;
+  EXIT;
+  ```
+
+- Build and run the backend:
+  ```sh
+  ./mvnw spring-boot:run
+  ```
+
+#### 3. Frontend Setup
+
+- Install Node.js and npm:
+  ```sh
+  brew install node
+  ```
+  Verify installation:
+  ```sh
+  node -v && npm -v
+  ```
+
+- Install dependencies:
+  ```sh
+  cd frontend
+  npm install
+  ```
+
+- Install Expo CLI:
+  ```sh
+  npm install -g expo-cli
+  ```
+
+- Start the development server:
+  - For the web:
+    ```sh
+    npx expo start --web
+    ```
+  - For iOS (if you have Xcode installed and a simulator set up):
+    ```sh
+    npx expo start --ios
+    ```
+  - For Android (if you have an Android emulator set up with Android Studio):
+    ```sh
+    npx expo start --android
+    ```
+
+Running `npx expo start` without options will show the Expo developer tools where you can select the platform manually.
+
+## Checking Everything Works
 
 1. Start the backend and ensure it runs without errors (Default port is 8080).
 2. Start the frontend and verify that it compiles successfully (Default port is 8081).
