@@ -99,11 +99,9 @@ cd infantem
   ```
 - Start the development server:
   ```sh
-  npm expo start --web   
-  npm expo start --ios  
-  npm expo start --android  
+  npm start < --ios | --android | --web >
   ```
-  Running `npm expo start` without options will show the Expo developer tools where you can select the platform manually.
+  Running `npm start` without options will show the Expo developer tools where you can select the platform manually.
 
 ### Windows setup
 
