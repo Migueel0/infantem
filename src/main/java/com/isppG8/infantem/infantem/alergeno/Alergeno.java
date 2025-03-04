@@ -1,4 +1,4 @@
-package com.isppG8.infantem.alergeno;
+package com.isppG8.infantem.infantem.alergeno;
 
 import jakarta.persistence.*;
 
