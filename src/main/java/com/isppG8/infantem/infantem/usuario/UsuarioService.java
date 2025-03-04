@@ -1,10 +1,12 @@
-package com.isppG8.infantem.usuario;
+package com.isppG8.infantem.infantem.usuario;
 
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UsuarioService {
 
     @Autowired

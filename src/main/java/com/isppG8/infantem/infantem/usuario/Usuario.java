@@ -1,4 +1,4 @@
-package com.isppG8.infantem.usuario;
+package com.isppG8.infantem.infantem.usuario;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

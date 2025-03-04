@@ -1,4 +1,4 @@
-package com.isppG8.infantem.usuario;
+package com.isppG8.infantem.infantem.usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
