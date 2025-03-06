@@ -30,3 +30,6 @@ jobs:
             Automatically generated release for version ${{ github.ref_name }}.
           draft: false
           prerelease: false
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
