@@ -22,8 +22,7 @@ public class AlergenoController {
     @GetMapping("/{id}")
     public ResponseEntity<Alergeno> getAlergenoById(@PathVariable Long id) {
         Optional<Alergeno> alergeno = alergenoService.getAlergenoById(id);
-        return alergeno.map(ResponseEntity::ok)
-                       .orElseGet(() -> ResponseEntity.notFound().build());
+        return alergeno.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
@@ -34,14 +33,12 @@ public class AlergenoController {
     @PutMapping("/{id}")
     public ResponseEntity<Alergeno> updateAlergeno(@PathVariable Long id, @RequestBody Alergeno alergenoDetails) {
         Optional<Alergeno> updatedAlergeno = alergenoService.updateAlergeno(id, alergenoDetails);
-        return updatedAlergeno.map(ResponseEntity::ok)
-                              .orElseGet(() -> ResponseEntity.notFound().build());
+        return updatedAlergeno.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAlergeno(@PathVariable Long id) {
         return alergenoService.deleteAlergeno(id) ? ResponseEntity.noContent().build()
-                                                  : ResponseEntity.notFound().build();
+                : ResponseEntity.notFound().build();
     }
 }
-

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/v1/sueño")
 public class SueñoController {
-    
+
     @Autowired
     private SueñoService sueñoService;
 
