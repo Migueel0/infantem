@@ -51,7 +51,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: cd frontend && npm install
 
       #- name: Run frontend tests
         #run: Add command to execute tests
