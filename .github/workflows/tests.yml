@@ -23,10 +23,11 @@ jobs:
             java-version: 21
             
 
-      - name: Install dependencies
-        run: mvn clean install
+      - name: Install dependencies and run tests
+        env:
+          DB_USERNAME: ${{secrets.DB_USERNAME}}
+          DB_PASSWORD: StrongPassword123!
 
-      - name: Run Maven tests
-        run: mvn test
+        run: mvn clean install
 
 
