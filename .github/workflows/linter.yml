@@ -33,7 +33,7 @@ jobs:
           commit_message: "fix: Apply formatter"
 
       - name: Check linter
-        run: mvn checkstyle:checkstyle
+        run: mvn checkstyle:check
 
   lint-frontend:
     name: Lint Frontend
