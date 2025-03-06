@@ -34,5 +34,24 @@ jobs:
           distribution: 'adopt'
           java-version: 21
 
-      - name: Install dependencies and run tests
+      - name: Install dependencies and run backend tests
         run: mvn clean install
+
+  test-frontend:
+    name: Test Frontend
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      #- name: Run frontend tests
+        #run: Add command to execute tests
