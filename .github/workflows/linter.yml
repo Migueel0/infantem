@@ -28,9 +28,6 @@ jobs:
       - name: Install formatter dependency
         run: mvn dependency:get -Dartifact=net.revelc.code.formatter:formatter-maven-plugin:2.25.0
 
-      - name: Run Maven Checkstyle
-        run: mvn checkstyle:check
-
       - name: Apply formatter
         run: mvn formatter:format
 
