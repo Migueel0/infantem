@@ -25,6 +25,9 @@ jobs:
           distribution: 'adopt'
           java-version: 21 
 
+      - name: Install formatter dependency
+        run: mvn dependency:get -Dartifact=net.revelc.code.formatter:formatter-maven-plugin:2.25.0
+
       - name: Apply formatter
         run: mvn formatter:format
 
@@ -33,7 +36,7 @@ jobs:
           commit_message: "fix: Apply formatter"
 
       - name: Check linter
-        run: mvn checkstyle:check
+        run: mvn checkstyle:checkstyle
 
   lint-frontend:
     name: Lint Frontend
