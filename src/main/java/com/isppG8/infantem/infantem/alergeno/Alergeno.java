@@ -12,7 +12,6 @@ public class Alergeno {
     private String nombre;
     private String descripcion;
 
-   
     public Alergeno() {
     }
 
@@ -21,7 +20,6 @@ public class Alergeno {
         this.descripcion = descripcion;
     }
 
-    
     public Long getId() {
         return id;
     }
@@ -46,4 +44,3 @@ public class Alergeno {
         this.descripcion = descripcion;
     }
 }
-

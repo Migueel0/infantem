@@ -13,17 +13,17 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "sueño_table")
-@Getter @Setter
+@Getter
+@Setter
 public class Sueño {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private LocalDateTime inicio;
     private LocalDateTime fin;
     private Integer numDesvalos;
     private tipoSueño tipoSueño;
-    
+
 }
